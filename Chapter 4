@@ -1,0 +1,116 @@
+using System;
+using System.Collections.Generic;
+
+class IntroProgramming
+
+{
+    static void Main(String[] args)
+    {
+        string companyName;
+        string companyAdd;
+        double companyPhone;
+        double companyFax;
+        string companyWeb;
+        string companyMan;
+
+        //The bit where we gather all the information about the company.
+
+        Console.WriteLine("Hello! Welcome to the company database. First we need to get some details from you.");
+        Console.WriteLine("What is the name of your company?");
+        companyName = Console.ReadLine();
+        Console.WriteLine("And your company address?");
+        companyAdd = Console.ReadLine();
+        Console.WriteLine("And your company phone number?");
+        companyPhone = double.Parse(Console.ReadLine());
+        Console.WriteLine("Give your company Website address, please.");
+        companyWeb = Console.ReadLine();
+        Console.WriteLine("And finally, what is the name of your Manager.");
+        companyMan = Console.ReadLine();
+
+        //Now going to ask the user if they want to review this information, or enter the managers info right away.
+
+        Console.WriteLine("To review this information, type yes. To move on, type no.");
+        string yes = "yes";
+        string no = "no";
+        string answer = Console.ReadLine();
+        bool review = answer == yes;
+        bool manager = answer == no;
+        bool neither = (answer != yes) && (answer != no);
+
+            if (review)
+            {
+                //Displays all info
+
+                Console.WriteLine("Your comapany information is;");
+                Console.WriteLine("Name: " + companyName);
+                Console.WriteLine("Adress: " + companyAdd);
+                Console.WriteLine("Phone Number: " + companyPhone);
+                Console.WriteLine("Website Address: " + companyAdd);
+                Console.WriteLine("Manager Name: " + companyMan);
+
+                //Now just something so that it doesn't move on straight away, and waits for key to be pressed to do so.
+
+                Console.WriteLine("Press any key to move on to entering Manager Information.");
+                Console.ReadKey();
+            }
+            if (manager)
+            {
+                Console.WriteLine("Okay. We will now move on to the Manager information.");
+            }
+            if (neither)
+            {
+                Console.WriteLine("Please enter 'yes' or 'no'.");
+                Console.ReadLine();
+                if (review)
+                {
+                Console.WriteLine("Your comapany information is;");
+                Console.WriteLine("Name: " + companyName);
+                Console.WriteLine("Adress: " + companyAdd);
+                Console.WriteLine("Phone Number: " + companyPhone);
+                Console.WriteLine("Website Address: " + companyAdd);
+                Console.WriteLine("Manager Name: " + companyMan);
+
+                Console.WriteLine("Press any key to move on to entering Manager Information.");
+                Console.ReadKey();
+
+            }
+                if (manager)
+                {
+                 Console.WriteLine("Thank you. We will now move on to manager information.");
+                }
+                if (neither)
+                {
+
+                // Makes the console shut down if an incorrect input put in for the second time.
+                Console.WriteLine("Now stop being difficult. Restarting Program.");
+                return;
+
+                }
+
+            }
+
+        // Need to establish what details we are getting about the manager
+
+        string firstName;
+        string lastName;
+        double telephone;
+
+        Console.WriteLine("Now we will collect the manager information.");
+        Console.WriteLine("Please enter the manager's first name.");
+        firstName = Console.ReadLine();
+        Console.WriteLine("And their last name?");
+        lastName = Console.ReadLine();
+        Console.WriteLine("Lastly, please give their telephone number.");
+        telephone = double.Parse(Console.ReadLine());
+        Console.WriteLine("Thank you. We now have all information collected.");
+        Console.WriteLine("This is the information you have given for the manager: ");
+        Console.WriteLine("First Name: " + firstName);
+        Console.WriteLine("Last Name: " + lastName);
+        Console.WriteLine("Telephone: " + telephone);
+
+        Console.WriteLine("Please press any button to exit.");
+        Console.ReadKey();
+        return;
+
+    }
+}
