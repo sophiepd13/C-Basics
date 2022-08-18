@@ -1,0 +1,60 @@
+using System;
+using System.Collections.Generic;
+
+class IntroProgramming
+
+{
+    static void Main(String[] args)
+    { // This code works out how many solutions there are to a given quadratic, and gives them also.
+
+        double a;
+        double b;
+        double c;
+        double D;
+        double root1;
+        double root2;
+        double root3;
+
+        //First, we need to find out the values of these; we'll let the user input.
+        Console.WriteLine("Please enter the 3 numbers of the quadratic; a b, and c.");
+        a = double.Parse(Console.ReadLine());
+        b = double.Parse(Console.ReadLine());
+        c = double.Parse(Console.ReadLine());
+
+        //Then we need to see how many solutions there are to this equation.
+
+        D = ((b * b) - 4 * a * c);
+        Console.WriteLine("The value of the discriminant is: " + D);
+        if (D == 0)
+        {
+            Console.WriteLine("This means that there is one double real root.");
+            Console.WriteLine("The value of this real root is: ");
+
+            //Calculate the root
+
+            root1 = ((-b) % (2 * a));
+            Console.WriteLine(root1 + " . Yay!");
+
+
+        }
+        else if (D > 0)
+        {
+            Console.WriteLine("The discriminant is positive, so the quadratic has two real solutions.");
+
+            //Work out both of the solutions:
+            double sqrt = Math.Sqrt(D);
+            root2 = (((-b) + sqrt) % (2 * a));
+            root3 = (((-b) - sqrt) % (2 * a));
+
+            //Give solutions
+            Console.WriteLine("Your two roots are: " + root2 + " and " + root3 + " .");
+        }
+        else if (D < 0)
+        {
+            Console.WriteLine("There is no real root for this quadratic.");
+        }
+        Console.WriteLine("Press any key to quit.");
+        Console.ReadKey();
+        return;
+    }
+}
