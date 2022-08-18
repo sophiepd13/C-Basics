@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+
+class IntroProgramming
+
+{
+    static void Main(String[] args)
+    {
+        //Define our variables
+
+        int a;
+        int b;
+        int c;
+
+        //Get those variables a value
+
+        Console.WriteLine("Please enter three numbers.");
+        a = int.Parse(Console.ReadLine());
+        b = int.Parse(Console.ReadLine());
+        c = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Your numbers are " + a +" , " + b + " , and " + c + " .");
+
+        if (a > b)
+        {
+            if (a > c)
+            {
+                Console.WriteLine("a is the largest number");
+            }
+            else
+            {
+                Console.WriteLine("c is the largest number");
+            }
+        }
+        else if (b > a)
+        {
+            if (b > c)
+            {
+                Console.WriteLine("b is the largest number");
+            }
+            else
+            {
+                Console.WriteLine("c is the largest number");
+            }
+        }
+        return;
+    }
+}
