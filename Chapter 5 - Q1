@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+
+class IntroProgramming
+
+{
+    static void Main(String[] args)
+    {
+        // define the two numbers
+        Console.WriteLine("Enter the two numbers you want to use.");
+        int a = int.Parse(Console.ReadLine());
+        int b = int.Parse(Console.ReadLine());
+        int c = a;
+
+        //Now do the maths comparison
+
+        bool aLarger = (a > b);
+        bool bLarger = (b > a);
+
+        if (aLarger)
+        {
+            a = b;
+            b = c;
+
+            Console.WriteLine("The value of a is now " + a + " and the value of b is " + b + " .");
+        }
+        else if (bLarger)
+        {
+            Console.WriteLine("b is the larger number. Therefore no need to swap values.");
+        }
+
+    }
+}
