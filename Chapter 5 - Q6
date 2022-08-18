@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+
+class IntroProgramming
+
+{
+    static void Main(String[] args)
+    {
+        int input;
+
+        Console.WriteLine("Please enter a number between 0-9.");
+        input = int.Parse(Console.ReadLine());
+
+        //Make sure they entered a number between 0-9.
+        if (input < 0 || input > 9)
+        {
+            Console.WriteLine("Please restart program and enter a number between 0-9.");
+            return;
+        }
+        else
+        {
+            switch (input)
+            {
+                case 0:
+                    Console.WriteLine("Your number is zero."); break;
+                case 1:
+                    Console.WriteLine("Your number is one."); break;
+                case 2:
+                    Console.WriteLine("Your number is two."); break;
+                case 3:
+                    Console.WriteLine("Your number is three."); break;
+                case 4:
+                    Console.WriteLine("Your number is four."); break;
+                case 5:
+                    Console.WriteLine("Your number is five."); break;
+                case 6:
+                    Console.WriteLine("Your number is six."); break;
+                case 7:
+                    Console.WriteLine("Your number is seven."); break;
+                case 8:
+                    Console.WriteLine("Your number is eight."); break;
+                case 9:
+                    Console.WriteLine("Your number is nine."); break;
+            }
+
+            Console.WriteLine("Please press any key to exit.");
+            Console.ReadKey();
+            return;
+        }
+    }
+}
