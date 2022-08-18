@@ -1,0 +1,59 @@
+using System;
+using System.Collections.Generic;
+
+class IntroProgramming
+
+{
+    static void Main(String[] args)
+    {
+        int a;
+        int b;
+        int c;
+        Console.WriteLine("Enter a value for a: ");
+        a = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter a value for b: ");
+        b = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter a value for c: ");
+        c = int.Parse(Console.ReadLine());
+
+        // Now we want to do our nested 'if' statements to determine a correct order for the numbers.
+
+        if (a > b)
+        {
+            if (a > c)
+            {
+                if (b > c)
+                {
+                    Console.WriteLine("Your numbers in descending order are: " + a + " , " + b + " , " + c + " .");
+                }
+                else
+                {
+                    Console.WriteLine("Your numbers in descending order are: " + a + " , " + c + " , " + b + " .");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Your numbers in descending order are: " + c + " , " + a + " , " + b + " .");
+            }
+        }
+        else
+        {
+            if (b > c)
+            {
+                if (a > c)
+                {
+                    Console.WriteLine("Your numbers in descending order are: " + b + ", " + a + ", " + c + ".");
+                }
+                else
+                {
+                    Console.WriteLine("Your numbers in descending order are: " + b + " , " + c + " , " + a + " .");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Your numbers in descending order are: " + c + " , " + b + " , " + a + " .");
+            }
+        }
+        return;
+    }
+}
