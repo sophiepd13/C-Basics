@@ -1,0 +1,25 @@
+//Makes a program that counts to N for a given inputted N value. Uses for loop.
+
+using System;
+using System.Collections.Generic;
+
+class IntroProgramming
+
+{
+    static void Main(String[] args)
+    {
+        int i;
+        //Need to get out N value from the console
+        Console.WriteLine("Give a number N to count up to pleaseeee: ");
+        int N = int.Parse(Console.ReadLine());
+
+        //Checking the N reading worked and 
+        Console.WriteLine("Okay so you picked " + N + ".");
+       
+        //Our for loop:
+        for (i=0; i<N; i++)
+        {
+            Console.Write(" " + i);
+        }
+    }
+}
