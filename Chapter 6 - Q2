@@ -1,0 +1,22 @@
+using System.Collections.Generic;
+
+class IntroProgramming
+
+{
+    static void Main(String[] args)
+    {
+        int i;
+        Console.WriteLine("Please enter a number: ");
+        int N = int.Parse(Console.ReadLine());
+        //Then we want to set it up so if it divisable by 7 or 3 then it's not listed ...
+        for (i = 0; (i < N); i++)
+        { 
+        if (i % 3 != 0 && i % 7 != 0)
+                {
+                Console.WriteLine(" " + i);
+            }
+        }
+
+
+    }
+}
