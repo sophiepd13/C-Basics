@@ -1,0 +1,56 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Chapter_7_Solution_2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //defining the count values we will use to update the longest array length:
+
+            int sames = 1;
+            int bestSames = 1;
+            int bestStart = 0;
+            int lastElement = 0;
+
+            //ask the user to input their required array length:
+
+            Console.Write("Please enter the length of your array: ");
+            int length = int.Parse(Console.ReadLine());
+            int[] arr = new int[length];
+
+            //Now we input something to get the user to input the values they want in the array:
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.WriteLine("Enter the value for element {0}", i);
+                arr[i] = int.Parse(Console.ReadLine());
+            }
+
+            //Now this part counts through the array and updates the value of the longest same elements
+            //Uses the count values we defined earlier
+
+            for (int i = 0; i < arr.Length - 1; i++)
+            {
+                if (arr[i + 1] == arr[i] + 1)
+                {
+                    sames++;
+                    if (sames > bestSames)
+                    {
+                        bestSames = sames;
+                        lastElement = i + 1;
+                        bestStart = lastElement - bestSames + 1;
+                    }
+
+                }
+                else sames = 1;
+            }
+
+            for (int i = bestStart; i < bestSames + bestStart; i++) Console.Write("{0}, ", arr[i]);
+        }
+    }
+}
