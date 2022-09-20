@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Chapter_7_Solution_6
+{
+    class Program
+    {
+
+        static void Main()
+        {
+            int totalValue = 0;
+            //This bit gathers how many numbers we will need in the array.
+            Console.WriteLine("This program can tell you whether the sum of your numbers is positive, negative, or zero.");
+            Console.WriteLine("Firstly, how many numbers are you wanting to add?");
+            int length = int.Parse(s: Console.ReadLine());
+            Console.WriteLine("Okay, so there will be " + length + " numbers.");
+            int[] numberList = new int[length];
+
+            //This bit asks the user to input the values of the elements of the array.
+            Console.WriteLine("Now we need you to input the numbers you would like to add.");
+            for (int i = 0; i<length; i++)
+            {
+                Console.WriteLine("Please input the value for number {0}: ", i);
+                numberList[i] = int.Parse(s: Console.ReadLine());
+            }
+            foreach(int i in numberList)
+            {
+                totalValue += i;
+            }
+
+            Console.WriteLine("Your final total is: " + totalValue + " .");
+            if (totalValue > 0) 
+            {
+                Console.WriteLine("Your value is positive.");
+            }
+            else if (totalValue < 0)
+            {
+                Console.WriteLine("Your value is negative.");
+            }
+            else if (totalValue == 0)
+            {
+                Console.WriteLine("Your value is 0.");
+            }
+           
+        }
+        
+    }
+}
