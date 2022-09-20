@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Chapter_7_Solution_6
+{
+    class Program
+    {
+        
+        static void Main()
+        {
+            Console.WriteLine("How many books are you looking to buy?");
+            int bookNum = int.Parse(Console.ReadLine());
+            int[] books = new int[bookNum];
+            int totalPrice = 0;
+
+            Console.WriteLine("So you have " + bookNum + " books. What is the price of each?");
+            for (int i = 0; i < bookNum; i++)
+            {
+                Console.WriteLine("Give the price of book {0}: ", i);
+                books[i] = int.Parse(Console.ReadLine());
+            }
+            foreach (int i in books)
+            {
+                totalPrice += i;
+            }
+             Console.WriteLine("The total price for all of the books is: " + totalPrice);
+        }
+        
+
+
+
+    }
+}
